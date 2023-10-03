@@ -14,8 +14,5 @@ export function queryAPI(endpoint) {
   if (currentCount >= 4) {
     throw new Error('Endpoint load is high');
   }
-
-  // Replace this with actual API query logic for the specified endpoint
-  // For demonstration purposes, we'll just log a message
   console.log(`Querying endpoint: ${endpoint.name}`);
 }
