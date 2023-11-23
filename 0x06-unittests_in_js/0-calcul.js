@@ -1,6 +1,4 @@
-function calculateNumber(a, b) {
-    return Math.round(a) + Math.round(b);
-}
+const { calculateNumber } = require("./calculateNumber");
 
 module.exports = calculateNumber;
 
