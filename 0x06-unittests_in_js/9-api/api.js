@@ -7,17 +7,13 @@ app.get('/', (request, response) => {
   response.send('Welcome to the payment system');
 });
 
-// Add new endpoint with ID validation
-app.get('/cart/:id(\\d+)', (request, response) => {
-  const id = request.params.id;
-  response.send(`Payment methods for cart ${id}`);
+app.get('/cart/:id([0-9]+)', (request, response) => {
+    response.send(`Payment methods for cart ${request.params.id}`);
 });
 
 app.listen(port, () => {
-    console.log("API available on localhost port 7865");
+    console.log(`API available on localhost port ${port}`);
 });
 
 module.exports = app;
-
-
 
